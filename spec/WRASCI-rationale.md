@@ -3,7 +3,7 @@
 ## Pourquoi un nouveau système ?
 
 X-SAMPA et Kirshenbaum ont résolu le problème de 1990 :
-transcrire l'IPA sur un terminal ASCII 7-bit. En 2025, le
+transcrire l'IPA sur un terminal ASCII 7-bit. En 2026, le
 problème est différent : intégrer la phonétique dans des
 pipelines de traitement de données modernes (JSON, XML, SQL,
 regex, bases de données NoSQL) sans conflits de syntaxe.
