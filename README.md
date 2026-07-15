@@ -1,6 +1,6 @@
 # WRASCI — WRiting ASCii Ipa
 
-> Version : 1.1 (Kiel 2020 Compliant — Suffixes Géométriques Unifiés)
+> Version : 1.0.0 (Kiel 2020 Compliant — Suffixes Géométriques Unifiés)
 > Statut : Spécification de Production
 > Licence : Apache 2.0
 > Organisation : [wriml-org](https://github.com/wriml-org)
