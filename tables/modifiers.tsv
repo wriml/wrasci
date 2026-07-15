@@ -1,0 +1,26 @@
+api	description	wrasci	xsampa	logique
+ː	Allongement	lg	:	long
+ˑ	Semi-allongement	slg	:\	semi-long
+̃	Nasalisation	nas	~	nasalisation
+ʰ	Aspiration	asp	_h	aspiration
+ʼ	Éjective	ej	_>	éjective
+ʷ	Labialisation	lab	_w	labialisation
+ʲ	Palatalisation	pal	_j	palatalisation
+̥	Dévoisement	nvx	_0	non-voix
+̬	Voisement	vx	_v	voix
+◌̘	ATR (racine avancée)	atr	_A	acronyme intl
+◌̙	RTR (racine rétractée)	rtr	_q	acronyme intl
+ꜛ	Upstep	ustp	^	pas montant
+ꜜ	Downstep	dstp	!	pas descendant
+↗	Intonation montante globale	glr	N/A	global rising
+↘	Intonation descendante globale	glf	N/A	global falling
+◌̋	Ton Très Haut	thh	_T	tone high high
+◌́	Ton Haut	th	_H	tone high
+◌̄	Ton Moyen	tm	_M	tone mid
+◌̀	Ton Bas	tl	_L	tone low
+◌̏	Ton Très Bas	tll	_B	tone low low
+◌̌	Contour Montant	tlh	_R	tone L→H
+◌̂	Contour Descendant	thl	_F	tone H→L
+◌᷄	Contour Mi-Haut Montant	tmh	N/A	tone M→H
+◌᷅	Contour Mi-Bas Descendant	tml	N/A	tone M→L
+◌᷈	Contour Montant-Descendant	tlhl	N/A	tone L→H→L

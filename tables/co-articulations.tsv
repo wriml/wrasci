@@ -1,0 +1,26 @@
+api	description	wrasci	xsampa	logique
+ʘ	Clic bilabial	clb	O\	clic bilabial
+ǀ	Clic dental	cld	|\	clic dental
+ǃ	Clic alvéolaire	cla	!\	clic alvéolaire
+ǂ	Clic palatal	clp	=\	clic palatal
+ǁ	Clic latéral	cll	s\	clic latéral
+ɓ	Implosive bilabiale	bimp	b_<	b+imp
+ɗ	Implosive alvéolaire	dimp	d_<	d+imp
+ʄ	Implosive palatale	jimp	J\_<	j+imp
+ɠ	Implosive vélaire	gimp	g_<	g+imp
+ʛ	Implosive uvulaire	qimp	G\_<	q+imp
+k͡p	Occlusive labio-vélaire sourde	kp	kp	concaténation
+g͡b	Occlusive labio-vélaire voisée	gb	gb	concaténation
+t͡s	Affriquée alvéolaire sourde	ts	ts	concaténation
+d͡z	Affriquée alvéolaire voisée	dz	dz	concaténation
+t͡ʃ	Affriquée post-alvéolaire sourde	tsh	tS	concaténation
+d͡ʒ	Affriquée post-alvéolaire voisée	dzh	dZ	concaténation
+ʍ	Fricative labio-vélaire sourde	wsh	W	w sourd
+ɥ	Approximante labio-palatale voisée	wy	H	w+y
+ʜ	Fricative épiglottale sourde	hch	H\	épiglottale
+ʢ	Fricative épiglottale voisée	rgh	<\	épiglottale voisée
+ʡ	Occlusive épiglottale	epl	>\	epiglottal plosive
+ɕ	Fricative alvéolo-palatale sourde	csh	c	palatale sourde
+ʑ	Fricative alvéolo-palatale voisée	jzh	z\	palatale voisée
+ɺ	Battue latérale alvéolaire	l1	l\	l 1 battement
+ɧ	Fricative simultanée ʃ+x	shx	x\	concaténation

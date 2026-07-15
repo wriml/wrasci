@@ -1,0 +1,311 @@
+SYNTHÈSE WRIMED / WRIMAC
+
+PHILOSOPHIE GÉNÉRALE
+
+WRIML est un langage d’annotation généraliste.
+
+Il supporte plusieurs domaines d’interprétation, y compris des représentations très éloignées du texte linéaire (USIL, SVL, etc.).
+
+WRIMED constitue un sous-domaine éditorial de WRIML.
+
+Son principe fondamental est le content-only :
+
+le manuscrit exprime uniquement l’information nécessaire à sa structuration intellectuelle et éditoriale, sans imposer arbitrairement de rendu graphique.
+
+Le graphiste, le moteur typographique ou la couche de rendu conservent la responsabilité de la matérialisation visuelle.
+
+WRIMED cherche donc à imposer une discipline comparable aux grands standards éditoriaux et linguistiques :
+
+hiérarchisation sémantique explicite
+
+structuration logique
+
+refus des emphases anarchiques
+
+séparation stricte contenu / rendu
+
+
+Le but est d’éviter la dérive typographique de systèmes comme LaTeX où plusieurs syntaxes finissent par permettre d’exprimer les mêmes effets de manière redondante.
+
+WRIMED privilégie une grammaire sobre, cohérente, et sémantiquement motivée.
+
+ARCHITECTURE
+
+WRIML Langage général.
+
+WRIMED Sous-domaine éditorial content-only.
+
+WRIMAC Sous-domaine citationnel / académique de WRIMED.
+
+ADML Langage d’interprétation éditoriale et de mapping typographique.
+
+USIL Couche de rendu graphique plus générale, trop puissante pour être mobilisée directement dans les usages éditoriaux courants.
+
+PRINCIPE DE WRIMED
+
+Un auteur ne décrit pas un rendu.
+
+Il décrit :
+
+la nature du contenu
+
+sa structure
+
+sa fonction discursive
+
+sa hiérarchie informationnelle
+
+
+Le rendu doit être dérivable sans ambiguïté éditoriale à partir de cette structure.
+
+L’auteur indique ce qu’est un objet, non comment il doit être dessiné.
+
+OBJETS TEXTO-GRAPHIQUES
+
+WRIMED admet une exception contrôlée :
+
+certains objets sont intrinsèquement visuels.
+
+Ils ne constituent pas une violation du content-only, car leur spatialité fait partie de leur identité sémantique.
+
+À ce stade, deux objets sont retenus :
+
+poet calli
+
+POET
+
+Définition
+
+Bloc textuel poétique.
+
+Il signale que le texte doit conserver sa linéarité poétique propre.
+
+Effets syntaxiques
+
+À l’intérieur de poet :
+
+espaces actifs
+
+retours à la ligne actifs
+
+tabulations actives
+
+
+Le parseur ne normalise pas ces éléments.
+
+But
+
+Préserver la structure propre du vers.
+
+Exemple :
+
+^poet: Venez voir le sang dans les rues _poet:
+
+CALLI
+
+Définition
+
+Bloc calligrammatique ou plus largement bloc poétique spatial.
+
+CALLI désigne un objet textuel dont la disposition graphique participe constitutivement du message.
+
+Ce n’est pas une interface de mise en page générale.
+
+Ce n’est pas un mini CSS.
+
+Ce n’est pas un simple outil stylistique.
+
+C’est un type de contenu spécifique.
+
+Usage légitime
+
+calligrammes
+
+poésie spatiale
+
+objets poétiques où la géométrie du texte est signifiante
+
+
+Principe architectural
+
+CALLI est un nœud opaque.
+
+WRIMED reconnaît sa présence mais n’interprète pas son contenu interne.
+
+Son interprétation est déléguée à un moteur déclaré.
+
+Attribut ui
+
+CALLI peut déclarer un moteur interne :
+
+ui="adml" ui="latex" etc.
+
+Règle par défaut
+
+Si ui est absent :
+
+ui="adml"
+
+est injecté implicitement.
+
+Équivalence :
+
+^calli: ... _calli:
+
+équivaut à
+
+^calli ui="adml": ... _calli:
+
+Nature de l’opacité
+
+WRIMED valide uniquement :
+
+existence du bloc
+
+fermeture correcte
+
+appariement structurel
+
+validité syntaxique de ui
+
+
+WRIMED ignore :
+
+commandes internes
+
+layout
+
+style
+
+géométrie
+
+cohérence graphique
+
+validité du dialecte embarqué
+
+
+Le moteur interne est seul responsable de l’interprétation.
+
+Exemples
+
+ADML implicite :
+
+^calli: ^vfil* texte _calli:
+
+LaTeX explicite :
+
+^calli ui="latex": \vfil texte _calli:
+
+Justification
+
+CALLI permet d’écrire naturellement des poèmes calligrammatiques sans :
+
+multiplier les fichiers
+
+externaliser en image
+
+casser le flux rédactionnel
+
+
+Il facilite l’écriture sans contaminer WRIMED.
+
+RÈGLE ÉDITORIALE
+
+La conformité sémantique de calli ne peut être imposée grammaticalement.
+
+La règle est éditoriale :
+
+un bloc calli doit être utilisé uniquement lorsqu’il désigne effectivement un objet texto-graphique.
+
+Un manuscrit utilisant calli abusivement peut être rejeté par l’éditeur.
+
+Le langage reste permissif. La discipline relève de la validation éditoriale.
+
+WRIMAC
+
+Définition
+
+Sous-domaine citationnel / académique de WRIMED.
+
+Il formalise les structures de citation.
+
+Premières primitives :
+
+quote qt
+
+QUOTE
+
+Bloc de citation.
+
+Usage :
+
+citation structurée multi-ligne.
+
+Exemple :
+
+^quote: ... _quote:
+
+Fonction
+
+Encapsuler un extrait cité comme unité discursive autonome.
+
+QT
+
+Citation inline.
+
+Usage :
+
+citation courte intégrée dans le flux du texte.
+
+Fonction
+
+Équivalent citationnel compact de quote.
+
+INTEROPÉRABILITÉ
+
+WRIMAC étant un sous-domaine de WRIMED, il comprend poet et calli.
+
+Cela permet de citer proprement :
+
+des vers
+
+des poèmes
+
+des fragments calligrammatiques
+
+
+Exemple canonique :
+
+Comme dirait Pablo Neruda :
+
+^quote: ^poet: Venez voir le sang dans les rues Venez voir ^calli:^tab* le sang dans les rues_calli: Venez voir le sang ^calli:^tab* dans les rues_calli: _poet: _quote:
+
+RÈGLE STRUCTURELLE GLOBALE
+
+calli est autorisé partout.
+
+La légitimité de son usage est déterminée :
+
+non par la grammaire
+
+mais par la conformité sémantique de l’objet déclaré.
+
+RÉSUMÉ CONCEPTUEL
+
+WRIMED : écriture éditoriale disciplinée
+
+WRIMAC : formalisation citationnelle
+
+poet : préservation de la linéarité poétique
+
+calli : encapsulation d’un objet poétique spatial opaque
+
+quote : citation bloc
+
+qt : citation inline
+
+Principe directeur :
+
+le langage décrit ce qu’est le texte, jamais arbitrairement comment il doit apparaître,
+
+sauf lorsque la forme spatiale constitue elle-même la nature sémantique de l’objet textuel : le cas des poèmes calligrammatiques.

@@ -1,0 +1,440 @@
+Voici la spec GAL 
+
+
+---
+
+# GAL — Geometry Abstraction Layer  
+## Specification v0.2
+
+---
+
+# 1. Objectif
+
+GAL est un langage déclaratif de construction géométrique intégré à ADML.
+
+Il permet de décrire des formes vectorielles de manière intentionnelle, sans manipulation directe des paramètres géométriques bas niveau.
+
+L’auteur exprime une intention, le moteur traduit en géométrie calculable.
+
+---
+
+# 2. Deux niveaux de définition
+
+## 2.1 Shape (définition)
+
+Une `shape` définit une forme réutilisable.
+
+```adml
+^shape name="anneau":
+   ...
+_shape:
+
+
+---
+
+2.2 Instanciation
+
+Une shape peut être réutilisée comme primitive :
+
+^anneau:
+   ...
+_anneau:
+
+Une forme utilisateur devient une primitive de premier niveau.
+
+
+---
+
+3. Identifiants
+
+3.1 LID / GLID
+
+GAL distingue deux types d’identifiants :
+
+LID (Local ID)
+
+scope : shape ou groupe
+
+usage interne uniquement
+
+
+GLID (Global ID)
+
+accessible dans tout ADML (CAL, VAL, etc.)
+
+permet réutilisation cross-layer
+
+
+Un élément ne peut pas être LID et GLID simultanément.
+
+
+---
+
+4. Primitives natives
+
+4.1 Rectangle
+
+largeur / hauteur
+
+coins (radius x/y)
+
+transformations :
+
+rotation
+
+miroir
+
+inclinaison
+
+
+
+Inclinaison :
+
+incl="10vw left & 20vw up"
+
+
+---
+
+4.2 Ellipse
+
+Identique au rectangle sauf coins.
+
+
+---
+
+4.3 Polygon
+
+nombre de côtés
+
+dimensions
+
+transformations classiques
+
+
+
+---
+
+4.4 Plume (courbes de Bézier)
+
+Primitive de courbe intentionnelle.
+
+Principe
+
+segment implicite 0 → 1
+
+repère local au start
+
+description humaine, pas technique
+
+
+
+---
+
+Nœuds
+
+Une plume est une suite ordonnée de nœuds.
+
+Chaque nœud possède :
+
+position (relative ou absolue recalée)
+
+type
+
+poignées
+
+
+
+---
+
+Types de nœuds
+
+corner : cassure libre
+
+smooth : continuité tangentielle
+
+symmetric : symétrie des poignées
+
+auto : inféré par le moteur
+
+
+
+---
+
+Poignées
+
+Chaque nœud peut avoir :
+
+poignée gauche
+
+poignée droite
+
+
+Chaque poignée contient :
+
+longueur
+
+angle (inclinaison)
+
+
+
+---
+
+Règles poignées
+
+gauche = droite = 0 → corner implicite
+
+symmetric impose égalité
+
+auto laisse le moteur décider
+
+
+
+---
+
+Inclinaison globale
+
+incl="..."
+
+
+---
+
+Références fractionnelles
+
+center = 0.5
+
+third = 1/3
+
+quart = 1/4
+
+nthird = n/3 etc.
+
+
+
+---
+
+Dépassement
+
+Valeurs > 1 autorisées :
+
+1.5 = dépassement de 50%
+
+
+
+---
+
+4.5 Mask
+
+Primitive de découpe :
+
+clipping
+
+perforation
+
+exclusion
+
+soustraction
+
+
+
+---
+
+4.6 Group
+
+Structure optionnelle :
+
+organisation
+
+scope local
+
+cible d’opérations
+
+
+
+---
+
+5. Placement
+
+Anchor
+
+Référence à un objet.
+
+
+---
+
+Align
+
+left / right / top / bottom / center
+
+fractions possibles
+
+
+Ex :
+
+2third bottom
+
+
+---
+
+Border
+
+outer : extérieur
+
+inner : intérieur
+
+
+
+---
+
+Syntaxe combinée
+
+align="2third outer bottom & inner top"
+
+
+---
+
+6. Opérations booléennes
+
+Types :
+
+union
+
+difference
+
+intersection
+
+
+
+---
+
+Exécution
+
+Les opérations sont exécutées dans l’ordre de déclaration.
+
+
+---
+
+Modèle
+
+séquentiel implicite
+
+override possible via structure future
+
+
+
+---
+
+Ambiguïté
+
+Si résultat invariant → le moteur peut choisir librement.
+
+
+---
+
+7. Masques
+
+Les masks sont des primitives géométriques de découpe :
+
+clipping
+
+perforation
+
+fenêtres
+
+exclusions locales
+
+
+
+---
+
+8. Plume — modèle complet
+
+Segment implicite
+
+Base : 0 → 1
+
+
+---
+
+Structure
+
+0 à N nœuds
+
+N = 0 → ligne droite
+
+
+
+---
+
+Position
+
+relative par défaut
+
+absolue recalée par CAL
+
+
+
+---
+
+Type
+
+corner
+
+smooth
+
+symmetric
+
+auto
+
+
+
+---
+
+Poignées
+
+longueur gauche / droite
+
+ou longueur unique (sym)
+
+angle obligatoire ou inféré
+
+
+
+---
+
+Fermeture
+
+closed=true
+
+Effet :
+
+dernier nœud relié au premier
+
+
+
+---
+
+9. Philosophie
+
+GAL est un langage d’intention géométrique.
+
+Il décrit :
+
+formes
+
+relations
+
+continuités
+
+ruptures
+
+transformations
+
+découpes
+
+
+et non des paramètres mathématiques directs.
+
+Le moteur traduit ces intentions en géométrie calculable.
+
+
+---

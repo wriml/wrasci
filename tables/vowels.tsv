@@ -1,0 +1,29 @@
+api	description	wrasci	xsampa	logique
+i	Fermée antérieure non arrondie	i	i	Base
+y	Fermée antérieure arrondie	y	y	Base
+ɨ	Fermée centrale non arrondie	ib	1	i barré
+ʉ	Fermée centrale arrondie	ub	}	u barré
+ɯ	Fermée postérieure non arrondie	um	M	u modifié
+u	Fermée postérieure arrondie	u	u	Base
+ɪ	Quasi-fermée quasi-ant. non arrondie	ic	I	i capital/lax
+ʏ	Quasi-fermée quasi-ant. arrondie	yc	Y	y capital/lax
+ʊ	Quasi-fermée quasi-post. arrondie	uc	U	u capital/lax
+e	Mi-fermée antérieure non arrondie	e	e	Base
+ø	Mi-fermée antérieure arrondie	eu	2	e arrondi
+ɘ	Mi-fermée centrale non arrondie	ei	@\	e inversé
+ɵ	Mi-fermée centrale arrondie	ob	8	o barré
+ɤ	Mi-fermée postérieure non arrondie	eo	7	e ouvert
+o	Mi-fermée postérieure arrondie	o	o	Base
+ə	Mi-centrale (Schwa)	shwa	@	Nom usuel
+ɛ	Mi-ouverte antérieure non arrondie	3i	E	3 inversé
+œ	Mi-ouverte antérieure arrondie	oe	9	Ligature OE
+ɜ	Mi-ouverte centrale non arrondie	3	3	Visuel direct
+ɞ	Mi-ouverte centrale arrondie	3u	3\	3 arrondi
+ʌ	Mi-ouverte postérieure non arrondie	vr	V	v renversé
+ɔ	Mi-ouverte postérieure arrondie	oo	O	o ouvert
+æ	Pré-ouverte antérieure non arrondie	ae	{	Ligature AE
+ɐ	Pré-ouverte centrale	ar	6	a renversé
+a	Ouverte antérieure non arrondie	a	a	Base
+ɶ	Ouverte antérieure arrondie	aoe	&	a + OE
+ɑ	Ouverte postérieure non arrondie	ao	A	a ouvert
+ɒ	Ouverte postérieure arrondie	aou	Q	ao arrondi

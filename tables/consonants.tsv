@@ -1,0 +1,58 @@
+api	description	wrasci	xsampa	logique
+p	Occlusive bilabiale sourde	p	p	Base
+b	Occlusive bilabiale voisée	b	b	Base
+t	Occlusive alvéolaire sourde	t	t	Base
+d	Occlusive alvéolaire voisée	d	d	Base
+ʈ	Occlusive rétroflexe sourde	ttr	t`	+tr rétroflexe
+ɖ	Occlusive rétroflexe voisée	dtr	d`	+tr rétroflexe
+c	Occlusive palatale sourde	c	c	Base
+ɟ	Occlusive palatale voisée	cj	J\	c voisé
+k	Occlusive vélaire sourde	k	k	Base
+g	Occlusive vélaire voisée	g	g	Base
+q	Occlusive uvulaire sourde	q	q	Base
+ɢ	Occlusive uvulaire voisée	gq	G\	g uvulaire
+ʔ	Occlusive glottale	glot	?	glottal stop
+m	Nasale bilabiale	m	m	Base
+ɱ	Nasale labiodentale	mv	M	m+v
+n	Nasale alvéolaire	n	n	Base
+ɳ	Nasale rétroflexe	ntr	n`	n+tr
+ɲ	Nasale palatale	ny	J	digraphe
+ŋ	Nasale vélaire	ng	N	digraphe
+ɴ	Nasale uvulaire	ngq	N\	ng+q
+ɸ	Fricative bilabiale sourde	ph	p\	phi
+β	Fricative bilabiale voisée	bh	B	beta
+f	Fricative labiodentale sourde	f	f	Base
+v	Fricative labiodentale voisée	v	v	Base
+θ	Fricative dentale sourde	tht	T	theta
+ð	Fricative dentale voisée	dht	D	delta
+s	Fricative alvéolaire sourde	s	s	Base
+z	Fricative alvéolaire voisée	z	z	Base
+ʃ	Fricative post-alvéolaire sourde	sh	S	digraphe
+ʒ	Fricative post-alvéolaire voisée	zh	Z	digraphe
+ʂ	Fricative rétroflexe sourde	str	s`	+tr
+ʐ	Fricative rétroflexe voisée	ztr	z`	+tr
+ç	Fricative palatale sourde	cc	C	c palatal
+ʝ	Fricative palatale voisée	jc	j\	j palatal
+x	Fricative vélaire sourde	x	x	Base
+ɣ	Fricative vélaire voisée	gh	G	g fricatif
+χ	Fricative uvulaire sourde	ch	X	ach-laut
+ʁ	Fricative uvulaire voisée	rfr	R\	r français
+ħ	Fricative pharyngale sourde	hph	X\	h pharyngal
+ʕ	Fricative pharyngale voisée	phv	?\	ph voisé
+h	Fricative glottale sourde	h	h	Base
+ɦ	Fricative glottale voisée	hv	H\	h voisé
+r	Vibrante alvéolaire	r	r	Base
+ʀ	Vibrante uvulaire	rq	R	r uvulaire
+ɾ	Battue alvéolaire	r1	4	r 1 battement
+ɽ	Battue rétroflexe	r1tr	r`	r1+tr
+ʋ	Approximante labiodentale	vh	v\	v spirant
+ɹ	Approximante alvéolaire	ra	r\	r approximant
+ɻ	Approximante rétroflexe	ratr	r`	ra+tr
+j	Approximante palatale (yod)	j	j	Base
+w	Approximante labio-vélaire	w	w	Base
+l	Latérale alvéolaire	l	l	Base
+ɭ	Latérale rétroflexe	ltr	l`	+tr
+ʎ	Latérale palatale	ly	L	l mouillé
+ʟ	Approximante latérale vélaire	lk	L\	l vélaire
+ɬ	Fricative latérale sourde	ls	t\	l sourde
+ɮ	Fricative latérale voisée	lv	d\	l voisée
