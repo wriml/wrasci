@@ -1,7 +1,7 @@
 # WRASCI — WRiting ASCii Ipa
 ## Spécification Technique
 
-**Version :** 1.1 (Kiel 2020 Compliant — Suffixes Géométriques Unifiés)
+**Version :** 1.0.0 (Kiel 2020 Compliant — Suffixes Géométriques Unifiés)
 **Statut :** Spécification de Production
 
 ---
